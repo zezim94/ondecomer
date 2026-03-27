@@ -47,7 +47,6 @@ $sql_comentarios = "SELECT a.nota, a.comentario, a.data_avaliacao, u.nome as cli
                     ORDER BY a.data_avaliacao DESC LIMIT 5";
 $comentarios = $conn->query($sql_comentarios);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -312,7 +311,8 @@ $comentarios = $conn->query($sql_comentarios);
                                     <p style="font-style: italic; margin-top: 4px; font-size: 0.85rem; color: #555;">
                                         "<?= $com['comentario'] ?>"</p>
                                     <div style="font-size: 0.7rem; color: #aaa; margin-top: 4px;">
-                                        <?= date('d/m/Y H:i', strtotime($com['data_avaliacao'])) ?></div>
+                                        <?= date('d/m/Y H:i', strtotime($com['data_avaliacao'])) ?>
+                                    </div>
                                 </div>
                             <?php endwhile; ?>
                         <?php else: ?>
