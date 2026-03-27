@@ -47,6 +47,8 @@ $sql_comentarios = "SELECT a.nota, a.comentario, a.data_avaliacao, u.nome as cli
                     ORDER BY a.data_avaliacao DESC LIMIT 5";
 $comentarios = $conn->query($sql_comentarios);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
